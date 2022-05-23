@@ -17,10 +17,22 @@ unlink() – Apaga o arquivo indicado.
 ‘x’	Cria e abre o arquivo para escrita somente; da erro se um arquivo já existir
 ‘x+’Cria e abre um arquivo para escrita e leitura; da erro se um arquivo já existir -->
 <?php 
+//so um teste aleatório
+    include("./classes.php");
+    
+    use foo\Cat as Cat;
+    echo Cat::says();
+//fim desse teste aleatório
+    if(!is_dir("Ola")){//ve se existe esse diretorio
+        mkdir("Ola",0777);//nome e  permissão dos arquivos
+    }
+    else 
+        rmdir("Ola");//nome para excluir
+
     $arquivo = fopen("arquivoTeste.txt","a+");//cria ou procura um arquivo, pode colocar o caminho inteiro ou so o nome se estiver na msm pasta
     $acumulador = array();
     
-    if( $arquivo == false ) 
+    if( $arquivo == false )
         die("Erro ao acessar o arquivo");
     //primeiro lê e depois escreve, da erro se fazer ao contrario
     // while(true) {
