@@ -12,12 +12,7 @@
     echo "<br>";
     echo $Data_a->format('d/m/Y H:i:s');//forma a data d significa dia, m mes, Y ano, H hora, i minutos, s segundos
 
-    function mostar(...$nome){
-        foreach($nome as $value):
-            echo "<br>Olá $value <br>";
-        endforeach;
-    }
-    mostar("yulian","aisha");
+
 
 
 

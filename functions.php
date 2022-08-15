@@ -45,6 +45,23 @@
     var_dump($gen->current());//pega o primeiro valor de yield
     $gen->next();//passa para o próximo yield
     var_dump($gen->current());//mostra o segundo valor
+
+    echo "<br/>";
+    $zero = 0;
+
+    function alterarValor( &$v ){// & faz a variável ser usada
+        $v++;
+    }
+
+    alterarValor($zero);// altera a variável passada
+    echo $zero;
+
+    function mostar(...$nome){
+        foreach($nome as $value):
+            echo "<br>Olá $value <br>";
+        endforeach;
+    }
+    mostar("yulian","aisha");
 ?>
 </body>
 </html>    

@@ -15,7 +15,8 @@
     $Tamanho = count($Singed);
     echo $Tamanho."<br>";
 
-    foreach ($Singed as $key => $value) {// aqui em php vc primeiro fala o Array que quer percorrer, diferente que no js, $key é a chave, $value o valor, pode fazer sem o $key colocando apenas o $value
+    foreach ($Singed as $key => $value) {
+        // aqui em php vc primeiro fala o Array que quer percorrer, diferente que no js, $key é a chave, $value o valor, pode fazer sem o $key colocando apenas o $value
         echo $key.": ".$value."<br>";
     }
 
@@ -64,4 +65,12 @@
     foreach ($soma1 as $value):
         echo $value."<br />";
     endforeach;
+    
+    var_dump( $Singed );
+    
+    shuffle( $Singed ); // embaralha de forma aleatória, faz isso direto na variável
+    var_dump( $Singed );
+    
+
+?>
     
