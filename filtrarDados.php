@@ -17,8 +17,9 @@
     var_dump( $html );
     
     echo "<br />";
-    // retira todu que pode ser de ruim para uma string
-    $string = filter_var( "<p> Olá Mundo </p>", FILTER_SANITIZE_STRING );
+    // retira tudo que pode ser de ruim para uma string
+    $string = htmlspecialchars("<p> Olá Mundo </p>", ENT_QUOTES);
+
     echo $string; // @return Olá Mundo
 
     echo "<br />";
